@@ -1,0 +1,86 @@
+ 
+
+CREATE TABLE [dbo].[AccYou](
+	[AccountPK] [int] NOT NULL,
+	[EMail1] [nvarchar](100) NULL,
+	[Affiliate] [bigint] NULL,
+	[FirstName] [nvarchar](200) NULL,
+	[Language] [nvarchar](100) NULL,
+	[LastName] [nvarchar](200) NULL,
+	[Referrer] [nvarchar](4000) NULL,
+	[Tag] [nvarchar](2000) NULL,
+	[Tag1] [nvarchar](1000) NULL,
+	[lv_TlId] [nvarchar](1000) NULL,
+	[CountryName] [nvarchar](100) NULL,
+	[OfficeIP] [bit] NULL,
+	[TestNameFlag] [int] NULL,
+	[Regulation] [nvarchar](50) NULL,
+	[CrmName] [nvarchar](100) NULL,
+	[AccountId] [nvarchar](255) NULL,
+	[CreatedOn] [datetime] NULL,
+	[AccountStatusNAme] [nvarchar](100) NULL,
+	[BirthDate] [date] NULL,
+	[InitialLeadStatus] [nvarchar](100) NULL,
+	[InitialPlatform] [nvarchar](200) NULL,
+	[FtdFlag] [int] NULL,
+	[ViopFtdExits] [tinyint] NULL,
+	[GoogleID] [nvarchar](1000) NULL,
+	[DescWebSite] [nvarchar](100) NULL,
+	[FxFtdApprovedOn] [datetime] NULL,
+	[ViopFtdApprovedOn] [datetime] NULL,
+	[CampaginId] [nvarchar](100) NULL,
+	[MainTpId] [int] NULL,
+	[City] [nvarchar](100) NULL,
+	[Ggeo] [nvarchar](100) NULL,
+	[KeywordGroup] [nvarchar](27) NULL,
+	[AnnualIncomeUSD] [nvarchar](100) NULL,
+	[AccountLicense] [nvarchar](20) NULL,
+	[Tag2] [nvarchar](1000) NULL,
+	[GDevice] [nvarchar](100) NULL,
+	[fxstd] [bit] NULL,
+	[KnowledgeInTrading] [nvarchar](100) NULL,
+	[SavingsAndInvestmentsUSD] [nvarchar](100) NULL,
+	[Placement] [nvarchar](1000) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[AccountPK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+CREATE TABLE [dbo].[TransactionYou](
+	[TicketPK] [int] NOT NULL,
+	[TicketId] [bigint] NOT NULL,
+	[ServerId] [tinyint] NULL,
+	[AccountPK] [int] NULL,
+	[CommandPK] [int] NULL,
+	[CloseTimeUTC] [datetime] NULL,
+	[Comment] [nvarchar](32) NULL,
+	[ProfitUSD] [float] NULL,
+	[LastUpdateDate] [datetime] NOT NULL,
+	[OpenTimeUTC] [datetime] NULL,
+	[Volume] [bigint] NULL,
+	[OpenPrice] [float] NULL,
+	[StopLoss] [float] NULL,
+	[TakeProfit] [float] NULL,
+	[Swaps] [float] NULL,
+	[ClosePrice] [float] NULL,
+	[SwapsUSD] [float] NULL,
+	[MarginRateUSD] [float] NULL,
+	[CancelledFlag] [tinyint] NULL,
+	[CloseVolumeBaseCurrency] [float] NULL,
+	[RealTradeFlag] [tinyint] NULL,
+	[OpenVolumeBaseCurrency] [float] NULL,
+	[ConversionRateOpen] [float] NULL,
+	[ConversionRateClose] [float] NULL,
+	[OpenPlatform] [nvarchar](50) NULL,
+	[CloseOS] [nvarchar](50) NULL,
+	[OpenProOS] [char](10) NULL,
+	[CloseProOS] [char](10) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[TicketPK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
